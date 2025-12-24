@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: kidquest-backend
+    env: python
+    plan: free
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "cd backend && gunicorn --bind 0.0.0.0:$PORT app:app --timeout 120"
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: GROQ_API_KEY
+        sync: false  # Set this value in Render Dashboard
+      - key: OPENROUTER_API_KEY
+        sync: false  # Set this value in Render Dashboard
+      - key: OPENROUTER_API_URL
+        value: "https://openrouter.ai/api/v1/chat/completions"
+      - key: FLASK_ENV
+        value: "production"
+      - key: RENDER
+        value: "true"
+    # FREE TIER DEPLOYMENT
+    # - Simple startup with Gunicorn only
+    # - Database initialization happens automatically in app.py
+    # - SQLite database in /tmp directory (writable on Render, resets on deployment)
+    # - Service spins down after 15 minutes of inactivity
+    # - 750 hours/month limit
