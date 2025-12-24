@@ -9,6 +9,13 @@ Software Engineering Project - May 2025, Team 25
 
 > **Note**: The frontend is hosted on Netlify and the backend API is hosted on Render. Cross-origin requests are properly configured with CORS.
 
+### 🔑 Demo Credentials
+
+To test the admin features, use the following credentials:
+
+- **Username**: `admin`
+- **Password**: `admin123`
+
 ## Problem Statement
 
 **Problem Statement 2: Life Skills App for School-Aged Children**
