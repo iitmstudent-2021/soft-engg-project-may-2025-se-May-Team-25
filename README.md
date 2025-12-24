@@ -2,6 +2,13 @@
 
 Software Engineering Project - May 2025, Team 25
 
+## 🚀 Live Deployment
+
+- **Frontend (Netlify)**: [https://kidquest.netlify.app](https://kidquest.netlify.app)
+- **Backend (Render)**: [https://your-backend.onrender.com](https://your-backend.onrender.com)
+
+> **Note**: The frontend is hosted on Netlify and the backend API is hosted on Render. Cross-origin requests are properly configured with CORS.
+
 ## Problem Statement
 
 **Problem Statement 2: Life Skills App for School-Aged Children**
